@@ -15,9 +15,6 @@ public class MainWindow{
     private JPanel windowPanel;
     private JScrollPane commandsArea;
     private JPanel drawingPanel;
-
-    private Timer timer;
-
     JFrame frame = new JFrame("title");
 
     public MainWindow() {
@@ -53,4 +50,9 @@ public class MainWindow{
     public void showFileError(){
         JOptionPane.showConfirmDialog(null,"Error opening file");
     }
+
+    public void clearDrawingPanel(){
+        drawingPanel.getGraphics().clearRect(0, 0, drawingPanel.getWidth(), drawingPanel.getHeight());
+    }
+
 }
